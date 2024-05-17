@@ -1,1 +1,2 @@
 *.log
+.env git add .gitignore git commit -m add .env a .gitignore
