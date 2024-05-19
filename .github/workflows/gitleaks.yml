@@ -1,0 +1,13 @@
+name: Gitleaks
+
+on: [push]
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Gitleaks
+      uses: zricethezav/gitleaks-action@v1.0.5
+      with:
+        args: "--path=."
