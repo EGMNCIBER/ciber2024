@@ -6,8 +6,9 @@ jobs:
   gitleaks:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run Gitleaks
-      uses: zricethezav/gitleaks-action@v4
-      with:
-        args: "--path=."
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run Gitleaks
+        uses: zricethezav/gitleaks-action@v3
+        with:
+          args: "--path=."
