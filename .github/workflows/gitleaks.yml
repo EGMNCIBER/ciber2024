@@ -9,6 +9,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run Gitleaks
-        uses: zricethezav/gitleaks-action@v3
+        uses: zricethezav/gitleaks-action@master
         with:
           args: "--path=."
