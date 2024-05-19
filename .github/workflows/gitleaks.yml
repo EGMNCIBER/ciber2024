@@ -9,6 +9,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run Gitleaks
-        uses: zricethezav/gitleaks-action@master
-        with:
-          args: "--path=."
+        run: |
+          docker run --rm -v $(pwd):/code zricethezav/gitleaks
